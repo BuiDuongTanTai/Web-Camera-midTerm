@@ -1,0 +1,132 @@
+# Figma Design File Structure
+
+## 1. Frame Setup
+- Dimensions: 1440px × 5000px (scrollable)
+- Grid: 12-column (1170px content width)
+- Margins: 24px sides
+- Padding: 48px between sections
+
+## 2. Color Styles
+- Primary: #0B5ED7
+- Secondary: #212529
+- Accent: #DC3545
+- Background: #F8F9FA
+- Text: #212529 (dark), #6C757D (muted)
+- White: #FFFFFF
+- Success: #28A745
+
+## 3. Text Styles
+- H1: Inter Bold 48px
+- H2: Inter Bold 36px
+- H3: Inter Bold 24px
+- Body: Inter Regular 16px
+- Small: Inter Regular 14px
+- Button: Inter Medium 14px (all caps)
+
+## 4. Components Created
+
+### A. Navigation Bar
+- Logo: CameraVN with camera icon
+- Main menu items with dropdown arrows
+- Search bar with icon
+- Cart icon with badge
+- User profile icon
+- Mobile hamburger menu variant
+
+### B. Hero Section
+- Background: Unsplash camera image with overlay
+- Headline: "Chụp lại khoảnh khắc"
+- Subhead: "với công nghệ hàng đầu"
+- CTA Buttons: 
+  - Primary: "Mua ngay" 
+  - Secondary: "Dịch vụ"
+
+### C. Category Cards (6)
+- Icons: Camera, CameraFill, CameraVideo, Disc, Lightning, Tools
+- Category names
+- Hover effect: scale(1.05) + shadow
+
+### D. Product Cards (6)
+- Product image placeholder
+- Name and rating (4.8 ★)
+- Price with discount strikethrough
+- "Thêm vào giỏ" button
+- Sale badge (-15%)
+- Hover: lift + shadow
+
+### E. Promotional Banner
+- Dark background with gradient
+- Headline: "Khuyến mãi đặc biệt tháng 3"
+- Countdown timer (days, hours, minutes, seconds)
+- CTA Button: "Mua ngay"
+
+### F. Testimonial Cards (3)
+- Avatar initials (NT, TH, PL)
+- 5-star rating
+- Testimonial text
+- Customer name + title
+
+### G. Newsletter Section
+- Blue background
+- Headline: "Đăng ký nhận thông tin"
+- Email input field
+- Subscribe button
+
+### H. Footer
+- 4-column layout
+- About section
+- Quick links
+- Customer service
+- Contact info
+- Copyright notice
+
+## 5. Interactive Elements
+
+### A. Shopping Cart Modal
+- Product rows with:
+  - Thumbnail
+  - Name
+  - Price
+  - Quantity controls
+- Subtotal calculation
+- Checkout button
+
+### B. Login/Register Modals
+- Form fields:
+  - Email
+  - Password
+  - Remember me checkbox
+- Toggle link between forms
+- Social login options
+
+## 6. Responsive Breakpoints
+
+### A. Tablet (768px)
+- 2-column product grid
+- Stacked footer
+- Simplified navigation
+
+### B. Mobile (375px)
+- 1-column layout
+- Hamburger menu
+- Larger tap targets
+- Adjusted typography
+
+## 7. Export Assets
+- Product card component
+- Color palette
+- Typography scale
+- Icon set (Bootstrap Icons)
+
+## 8. Prototype Flows
+1. Homepage → Product → Add to Cart
+2. Navigation → Category → Filtering
+3. Cart → Checkout process
+4. User login/registration
+
+## Implementation Notes:
+1. Used Unsplash images for product placeholders
+2. Created consistent spacing system (8px baseline)
+3. Designed all interactive states (hover, active, disabled)
+4. Included error states for forms
+5. Added loading skeletons for async content

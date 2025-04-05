@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog nhiếp ảnh | CameraVN - Cửa hàng máy ảnh chuyên nghiệp</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Loader -->
+<div class="loader-wrapper">
+    <div class="loader"></div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand logo" href="index.html"><i class="bi bi-camera-fill me-2"></i>CameraVN</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Trang chủ</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="products.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sản phẩm
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="products.html?category=dslr">Máy ảnh DSLR</a></li>
+                        <li><a class="dropdown-item" href="products.html?category=mirrorless">Máy ảnh mirrorless</a></li>
+                        <li><a class="dropdown-item" href="products.html?category=compact">Máy ảnh compact</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="products.html?category=lens">Ống kính (Lens)</a></li>
+                        <li><a class="dropdown-item" href="products.html?category=accessories">Phụ kiện</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="brandDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Loại hãng
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="brandDropdown">
+                        <li><a class="dropdown-item" href="products.html?brand=canon">Canon</a></li>
+                        <li><a class="dropdown-item" href="products.html?brand=sony">Sony</a></li>
+                        <li><a class="dropdown-item" href="products.html?brand=nikon">Nikon</a></li>
+                        <li><a class="dropdown-item" href="products.html?brand=fujifilm">Fujifilm</a></li>
+                        <li><a class="dropdown-item" href="products.html?brand=panasonic">Panasonic</a></li>
+                        <li><a class="dropdown-item" href="products.html?brand=leica">Leica</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Dịch vụ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="blog.html">Blog nhiếp ảnh</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">Giới thiệu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Thông tin</a>
+                </li>
+            </ul>
+            
+            <!-- Tách phần tìm kiếm và user thành phần riêng biệt -->
+            <div class="d-flex flex-column flex-lg-row align-items-lg-center">
+                <!-- Search form với kích thước cố định -->
+                <form class="d-flex search-form me-lg-2 mb-2 mb-lg-0">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Tìm kiếm" aria-label="Search">
+                        <button class="btn btn-outline-primary" type="submit"><i class="bi bi-search"></i></button>
+                    </div>
+                </form>
+                
+                <!-- User section -->
+                <div class="user-section">
+                    <button type="button" class="theme-toggle" id="themeToggle">
+                        <i class="bi bi-sun-fill"></i>
+                    </button>
+                    <div class="position-relative me-2">
+                        <a class="btn btn-outline-primary" href="cart.html" id="cartButton">
+                            <i class="bi bi-cart"></i>
+                        </a>
+                        <div class="cart-count">0</div>
+                    </div>
+                    <a class="btn btn-outline-primary" href="#login-modal" data-bs-toggle="modal" id="loginButton">
+                        <i class="bi bi-person me-1"></i>
+                        <span class="d-none d-md-inline">Đăng nhập</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Title -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="fw-bold">Blog nhiếp ảnh</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Blog nhiếp ảnh</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <div class="d-inline-flex align-items-center">
+                    <span class="me-2">Sắp xếp theo:</span>
+                    <select class="form-select form-select-sm" id="blogSort" style="width: auto;">
+                        <option value="newest">Mới nhất</option>
+                        <option value="popular">Phổ biến nhất</option>
+                        <option value="commented">Nhiều bình luận nhất</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Post -->
+<section class="py-5">
+    <div class="container">
+        <div class="card border-0 shadow-sm overflow-hidden">
+            <div class="row g-0">
+                <div class="col-md-6">
+                    <img src="figmaframe/hero.jpg" alt="7 Bí quyết để chụp ảnh phong cảnh hoàn hảo" class="img-fluid h-100" style="object-fit: cover;">
+                </div>
+                <div class="col-md-6">
+                    <div class="card-body p-4 p-lg-5 d-flex flex-column justify-content-center h-100">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <span class="badge bg-primary">Nổi bật</span>
+                            <span class="text-muted small">05/04/2025</span>
+                            <span class="ms-auto text-muted small"><i class="bi bi-eye me-1"></i> 1.2k</span>
+                        </div>
+                        <h2 class="card-title h1 mb-3">7 Bí quyết để chụp ảnh phong cảnh hoàn hảo</h2>
+                        <p class="card-text lead">Khám phá các kỹ thuật nâng cao giúp bạn chụp những bức ảnh phong cảnh đẹp mắt và ấn tượng. Từ việc hiểu về ánh sáng đến bố cục và thiết bị phù hợp.</p>
+                        <div class="d-flex align-items-center mt-3 mb-4">
+                            <img src="figmaframe/hero.jpg" alt="Nguyễn Minh" class="rounded-circle me-2" width="40" height="40">
+                            <div>
+                                <h6 class="mb-0">Nguyễn Minh</h6>
+                                <small class="text-muted">Nhiếp ảnh gia chuyên nghiệp</small>
+                            </div>
+                        </div>
+                        <a href="blog-detail.html?id=1" class="btn btn-primary">Đọc bài viết <i class="bi bi-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Posts -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-lg-8">
+                <h2 class="mb-4">Bài viết mới nhất</h2>
+                
+                <div class="row g-4 mb-5">
+                    <!-- Post Item 1 -->
+                    <div class="col-md-6" data-aos="fade-up">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="figmaframe/hero.jpg" class="card-img-top" alt="So sánh chi tiết giữa Canon EOS R6 và Sony A7 IV">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <span class="badge bg-info">Máy ảnh</span>
+                                    <span class="text-muted small">01/04/2025</span>
+                                </div>
+                                <h5 class="card-title">So sánh chi tiết giữa Canon EOS R6 và Sony A7 IV</h5>
+                                <p class="card-text">Phân tích chuyên sâu về hai mẫu máy ảnh mirrorless full-frame hàng đầu của Canon và Sony. Đâu là lựa chọn phù hợp với nhu cầu của bạn?</p>
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="figmaframe/hero.jpg" alt="Trần Hải" class="rounded-circle me-2" width="30" height="30">
+                                    <small class="text-muted">Trần Hải</small>
+                                </div>
+                                <a href="blog-detail.html?id=2" class="btn btn-sm btn-outline-primary mt-auto">Đọc tiếp</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post Item 2 -->
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="figmaframe/hero.jpg" class="card-img-top" alt="5 ống kính chân dung tốt nhất cho máy ảnh mirrorless năm 2025">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <span class="badge bg-warning text-dark">Ống kính</span>
+                                    <span class="text-muted small">28/03/2025</span>
+                                </div>
+                                <h5 class="card-title">5 ống kính chân dung tốt nhất cho máy ảnh mirrorless năm 2025</h5>
+                                <p class="card-text">Tổng hợp những ống kính chân dung xuất sắc nhất cho các dòng máy ảnh mirrorless phổ biến hiện nay cùng đánh giá chi tiết từ chuyên gia.</p>
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="figmaframe/hero.jpg" alt="Lê Anh" class="rounded-circle me-2" width="30" height="30">
+                                    <small class="text-muted">Lê Anh</small>
+                                </div>
+                                <a href="blog-detail.html?id=3" class="btn btn-sm btn-outline-primary mt-auto">Đọc tiếp</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post Item 3 -->
+                    <div class="col-md-6" data-aos="fade-up">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="figmaframe/hero.jpg" class="card-img-top" alt="Hướng dẫn chỉnh màu cơ bản trong Lightroom cho người mới bắt đầu">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <span class="badge bg-success">Hậu kỳ</span>
+                                    <span class="text-muted small">25/03/2025</span>
+                                </div>
+                                <h5 class="card-title">Hướng dẫn chỉnh màu cơ bản trong Lightroom cho người mới bắt đầu</h5>
+                                <p class="card-text">Khám phá các kỹ thuật chỉnh màu cơ bản trong Adobe Lightroom giúp bạn nâng tầm chất lượng ảnh một cách đơn giản và hiệu quả.</p>
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="figmaframe/hero.jpg" alt="Phạm Linh" class="rounded-circle me-2" width="30" height="30">
+                                    <small class="text-muted">Phạm Linh</small>
+                                </div>
+                                <a href="blog-detail.html?id=4" class="btn btn-sm btn-outline-primary mt-auto">Đọc tiếp</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post Item 4 -->
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="figmaframe/hero.jpg" class="card-img-top" alt="10 phụ kiện thiết yếu cho nhiếp ảnh gia đường phố">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <span class="badge bg-secondary">Phụ kiện</span>
+                                    <span class="text-muted small">20/03/2025</span>
+                                </div>
+                                <h5 class="card-title">10 phụ kiện thiết yếu cho nhiếp ảnh gia đường phố</h5>
+                                <p class="card-text">Tổng hợp những phụ kiện không thể thiếu giúp bạn nâng cao chất lượng và tính linh hoạt khi chụp ảnh đường phố.</p>
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="figmaframe/hero.jpg" alt="Hoàng Nam" class="rounded-circle me-2" width="30" height="30">
+                                    <small class="text-muted">Hoàng Nam</small>
+                                </div>
+                                <a href="blog-detail.html?id=5" class="btn btn-sm btn-outline-primary mt-auto">Đọc tiếp</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post Item 5 -->
+                    <div class="col-md-6" data-aos="fade-up">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="figmaframe/hero.jpg" class="card-img-top" alt="Kỹ thuật chụp ảnh thiếu sáng cho người mới bắt đầu">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <span class="badge bg-danger">Kỹ thuật</span>
+                                    <span class="text-muted small">15/03/2025</span>
+                                </div>
+                                <h5 class="card-title">Kỹ thuật chụp ảnh thiếu sáng cho người mới bắt đầu</h5>
+                                <p class="card-text">Tìm hiểu các cách thiết lập máy ảnh và kỹ thuật chụp trong điều kiện ánh sáng yếu mà không cần thiết bị chuyên nghiệp đắt tiền.</p>
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="figmaframe/hero.jpg" alt="Nguyễn Minh" class="rounded-circle me-2" width="30" height="30">
+                                    <small class="text-muted">Nguyễn Minh</small>
+                                </div>
+                                <a href="blog-detail.html?id=6" class="btn btn-sm btn-outline-primary mt-auto">Đọc tiếp</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post Item 6 -->
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="figmaframe/hero.jpg" class="card-img-top" alt="Hướng dẫn chọn mua máy ảnh đầu tiên cho người mới">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <span class="badge bg-primary">Hướng dẫn</span>
+                                    <span class="text-muted small">10/03/2025</span>
+                                </div>
+                                <h5 class="card-title">Hướng dẫn chọn mua máy ảnh đầu tiên cho người mới</h5>
+                                <p class="card-text">Những tiêu chí quan trọng cần cân nhắc và gợi ý các mẫu máy ảnh phù hợp cho người mới bắt đầu với nhiếp ảnh.</p>
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="figmaframe/hero.jpg" alt="Trương Thảo" class="rounded-circle me-2" width="30" height="30">
+                                    <small class="text-muted">Trương Thảo</small>
+                                </div>
+                                <a href="blog-detail.html?id=7" class="btn btn-sm btn-outline-primary mt-auto">Đọc tiếp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                                <i class="bi bi-chevron-left"></i>
+                            </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <!-- Sidebar -->
+            <div class="col-lg-4 mt-5 mt-lg-0">
+                <!-- Categories Widget -->
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Danh mục</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <a href="#" class="text-decoration-none text-dark">Máy ảnh</a>
+                                <span class="badge bg-primary rounded-pill">15</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <a href="#" class="text-decoration-none text-dark">Ống kính</a>
+                                <span class="badge bg-primary rounded-pill">12</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <a href="#" class="text-decoration-none text-dark">Kỹ thuật chụp ảnh</a>
+                                <span class="badge bg-primary rounded-pill">20</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <a href="#" class="text-decoration-none text-dark">Hậu kỳ</a>
+                                <span class="badge bg-primary rounded-pill">8</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <a href="#" class="text-decoration-none text-dark">Phụ kiện</a>
+                                <span class="badge bg-primary rounded-pill">10</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <a href="#" class="text-decoration-none text-dark">Đánh giá sản phẩm</a>
+                                <span class="badge bg-primary rounded-pill">18</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Search Widget -->
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Tìm kiếm</h5>
+                        <form>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Tìm kiếm bài viết...">
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Popular Posts Widget -->
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Bài viết phổ biến</h5>
+                        <div class="popular-posts">
+                            <!-- Popular Post 1 -->
+                            <div class="d-flex mb-3">
+                                <a href="blog-detail.html?id=8" class="me-3">
+                                    <img src="figmaframe/hero.jpg" alt="Cách chụp ảnh sản phẩm tại nhà" class="rounded" style="width: 70px; height: 70px; object-fit: cover;">
+                                </a>
+                                <div>
+                                    <h6 class="mb-1"><a href="blog-detail.html?id=8" class="text-decoration-none text-dark">Cách chụp ảnh sản phẩm tại nhà</a></h6>
+                                    <div class="small text-muted">05/03/2025</div>
+                                    <div class="small text-muted"><i class="bi bi-eye me-1"></i> 3.5k</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Popular Post 2 -->
+                            <div class="d-flex mb-3">
+                                <a href="blog-detail.html?id=9" class="me-3">
+                                    <img src="figmaframe/hero.jpg" alt="7 cài đặt máy ảnh quan trọng mà bạn nên biết" class="rounded" style="width: 70px; height: 70px; object-fit: cover;">
+                                </a>
+                                <div>
+                                    <h6 class="mb-1"><a href="blog-detail.html?id=9" class="text-decoration-none text-dark">7 cài đặt máy ảnh quan trọng mà bạn nên biết</a></h6>
+                                    <div class="small text-muted">28/02/2025</div>
+                                    <div class="small text-muted"><i class="bi bi-eye me-1"></i> 3.2k</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Popular Post 3 -->
+                            <div class="d-flex mb-3">
+                                <a href="blog-detail.html?id=10" class="me-3">
+                                    <img src="figmaframe/hero.jpg" alt="Những điều cần biết về flash và đèn studio" class="rounded" style="width: 70px; height: 70px; object-fit: cover;">
+                                </a>
+                                <div>
+                                    <h6 class="mb-1"><a href="blog-detail.html?id=10" class="text-decoration-none text-dark">Những điều cần biết về flash và đèn studio</a></h6>
+                                    <div class="small text-muted">20/02/2025</div>
+                                    <div class="small text-muted"><i class="bi bi-eye me-1"></i> 2.8k</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Popular Post 4 -->
+                            <div class="d-flex">
+                                <a href="blog-detail.html?id=11" class="me-3">
+                                    <img src="figmaframe/hero.jpg" alt="Chụp ảnh chân dung: từ cơ bản đến nâng cao" class="rounded" style="width: 70px; height: 70px; object-fit: cover;">
+                                </a>
+                                <div>
+                                    <h6 class="mb-1"><a href="blog-detail.html?id=11" class="text-decoration-none text-dark">Chụp ảnh chân dung: từ cơ bản đến nâng cao</a></h6>
+                                    <div class="small text-muted">15/02/2025</div>
+                                    <div class="small text-muted"><i class="bi bi-eye me-1"></i> 2.5k</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tags Widget -->
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Thẻ phổ biến</h5>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="#" class="btn btn-sm btn-outline-secondary">Máy ảnh mirrorless</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">Canon</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">Sony</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">Nikon</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">Fujifilm</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">Chân dung</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">Phong cảnh</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">Lightroom</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">Photoshop</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">Nhiếp ảnh đường phố</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">Du lịch</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">Flash</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Newsletter Widget -->
+                <div class="card border-0 shadow-sm bg-primary text-white">
+                    <div class="card-body p-4">
+                        <h5 class="card-title mb-3">Đăng ký nhận tin</h5>
+                        <p>Nhận thông báo về các bài viết mới và mẹo nhiếp ảnh hữu ích qua email.</p>
+                        <form>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Email của bạn">
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-light">Đăng ký</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Photographer Community -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2>Cộng đồng nhiếp ảnh gia CameraVN</h2>
+            <p class="lead">Tham gia cộng đồng để chia sẻ và học hỏi từ hàng nghìn nhiếp ảnh gia khác</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="card border-0 shadow-sm text-center h-100">
+                    <div class="card-body p-4">
+                        <div class="mb-4">
+                            <i class="bi bi-people-fill text-primary" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="card-title">Diễn đàn nhiếp ảnh</h5>
+                        <p class="card-text">Tham gia diễn đàn, chia sẻ kinh nghiệm và đặt câu hỏi với cộng đồng nhiếp ảnh gia từ khắp mọi nơi.</p>
+                        <a href="#" class="btn btn-outline-primary mt-3">Tham gia diễn đàn</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card border-0 shadow-sm text-center h-100">
+                    <div class="card-body p-4">
+                        <div class="mb-4">
+                            <i class="bi bi-camera-fill text-primary" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="card-title">Chia sẻ hình ảnh</h5>
+                        <p class="card-text">Đăng tải và chia sẻ những tác phẩm của bạn, nhận đánh giá và góp ý từ cộng đồng nhiếp ảnh gia.</p>
+                        <a href="#" class="btn btn-outline-primary mt-3">Chia sẻ ngay</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card border-0 shadow-sm text-center h-100">
+                    <div class="card-body p-4">
+                        <div class="mb-4">
+                            <i class="bi bi-calendar-event text-primary" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="card-title">Sự kiện nhiếp ảnh</h5>
+                        <p class="card-text">Khám phá và tham gia các sự kiện nhiếp ảnh, workshop và chuyến đi chụp ảnh cùng những người có cùng đam mê.</p>
+                        <a href="#" class="btn btn-outline-primary mt-3">Xem sự kiện</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2>Đăng ký nhận tin</h2>
+                <p class="lead mb-4">Nhận thông báo về bài viết mới nhất, mẹo chụp ảnh và khuyến mãi đặc biệt</p>
+                <div class="input-group input-group-lg max-width-500 mx-auto">
+                    <input type="email" class="form-control" placeholder="Email của bạn">
+                    <button class="btn btn-primary" type="button">Đăng ký</button>
+                </div>
+                <div class="form-text mt-2">Chúng tôi sẽ không gửi spam và bạn có thể hủy đăng ký bất cứ lúc nào.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <a href="index.html" class="footer-logo"><i class="bi bi-camera-fill me-2"></i>CameraVN</a>
+                <p>Cung cấp các dòng máy ảnh chính hãng từ các thương hiệu hàng đầu thế giới với dịch vụ chuyên nghiệp nhất.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="https://twitter.com/" target="_blank"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.youtube.com/" target="_blank"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5>Thông tin</h5>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="about.html">Về chúng tôi</a></li>
+                    <li><a href="blog.html">Blog nhiếp ảnh</a></li>
+                    <li><a href="#careers">Tuyển dụng</a></li>
+                    <li><a href="#store">Hệ thống cửa hàng</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5>Dịch vụ khách hàng</h5>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#faq">Câu hỏi thường gặp</a></li>
+                    <li><a href="#warranty">Chính sách bảo hành</a></li>
+                    <li><a href="#returns">Chính sách đổi trả</a></li>
+                    <li><a href="#shipping">Thông tin vận chuyển</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5>Liên hệ</h5>
+                <ul class="list-unstyled footer-contact-info">
+                    <li>
+                        <i class="bi bi-geo-alt"></i>
+                        <div>
+                            <p>Đại học Tôn Đức Thắng, Quận 7, TP.HCM</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="bi bi-telephone"></i>
+                        <div>
+                            <p>0708624193 - 0868212407</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="bi bi-envelope"></i>
+                        <div>
+                            <p>52300262@student.tdtu.edu.vn</p>
+                            <p>52300154@student.tdtu.edu.vn</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="bi bi-clock"></i>
+                        <div>
+                            <p>Thứ 2 - Thứ 7: 8:00 - 20:00</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Copyright &copy; 2023. Dự Án môn web CameraVN.</p>
+                    <p>52300262-Phạm Hoài Thương ; 52300154-Bùi Dương Tấn Tài.</p>
+                </div>
+                <div class="col-md-6 footer-bottom-links">
+                    <a href="#privacy">Chính sách riêng tư</a>
+                    <a href="#terms">Điều khoản sử dụng</a>
+                    <a href="#sitemap">Sơ đồ trang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Login Modal -->
+<div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Đăng nhập</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="#" method="get" id="login-form" class="auth-form">
+                    <div class="mb-3">
+                        <label for="login-email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="login-email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="login-password" class="form-label">Mật khẩu</label>
+                        <input type="password" class="form-control" id="login-password" required>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="remember-me">
+                        <label class="form-check-label" for="remember-me">Ghi nhớ đăng nhập</label>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                    </div>
+                    <div class="text-center my-3">
+                        <span>Hoặc đăng nhập với</span>
+                    </div>
+                    <div class="social-login">
+                        <a href="#" class="social-login-btn facebook-btn">
+                            <i class="bi bi-facebook"></i> Facebook
+                        </a>
+                        <a href="#" class="social-login-btn google-btn">
+                            <i class="bi bi-google"></i> Google
+                        </a>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <p class="mb-0">Chưa có tài khoản? <a href="#register-modal" data-bs-toggle="modal" data-bs-dismiss="modal">Đăng ký ngay</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Register Modal -->
+<div class="modal fade" id="register-modal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Đăng ký tài khoản</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="#" method="get" id="register-form" class="auth-form">
+                    <div class="mb-3">
+                        <label for="register-name" class="form-label">Họ tên</label>
+                        <input type="text" class="form-control" id="register-name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="register-email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="register-email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="register-phone" class="form-label">Số điện thoại</label>
+                        <input type="tel" class="form-control" id="register-phone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="register-password" class="form-label">Mật khẩu</label>
+                        <input type="password" class="form-control" id="register-password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="register-confirm-password" class="form-label">Xác nhận mật khẩu</label>
+                        <input type="password" class="form-control" id="register-confirm-password" required>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="agree-terms" required>
+                        <label class="form-check-label" for="agree-terms">Tôi đồng ý với <a href="#">điều khoản sử dụng</a></label>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Đăng ký</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <p class="mb-0">Đã có tài khoản? <a href="#login-modal" data-bs-toggle="modal" data-bs-dismiss="modal">Đăng nhập</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Back to Top Button -->
+<a href="#" class="back-to-top" id="backToTop">
+    <i class="bi bi-arrow-up"></i>
+</a>
+
+<!-- JavaScript Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<script src="scripts.js"></script>
+
+</body>
+</html>

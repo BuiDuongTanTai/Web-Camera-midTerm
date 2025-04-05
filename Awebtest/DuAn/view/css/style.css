@@ -1,0 +1,204 @@
+/* Custom styles */
+body {
+    padding-top: 0;
+    background-color: #f8f9fa;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0b5ed7;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #0b5ed7, #084298);
+    color: white;
+    padding: 100px 0;
+    margin-bottom: 50px;
+}
+
+.hero-title {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.product-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.product-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.product-image::before {
+    content: 'HOT';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(220, 53, 69, 0.9);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-sale {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+}
+
+.cart-thumbnail {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    border-radius: 4px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #dc3545;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.footer {
+    background-color: #212529;
+    color: #f8f9fa;
+    padding: 50px 0 20px;
+    margin-top: 50px;
+}
+
+.footer h5 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #495057;
+    color: #6c757d;
+}
+
+/* Animation for modal */
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+    transform: translate(0, -50px);
+}
+
+.modal.show .modal-dialog {
+    transform: none;
+}
+
+/* Category section */
+.category-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #0b5ed7;
+}
+
+.category-card {
+    transition: transform 0.3s;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Testimonial section */
+.testimonial-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.testimonial-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #0b5ed7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0 auto 20px;
+}
+
+/* Newsletter section */
+.newsletter-section {
+    background-color: #0b5ed7;
+    color: white;
+    padding: 60px 0;
+}
+
+/* Product SVG backgrounds */
+#product-1 {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200"><rect width="300" height="200" fill="%23212529"/><circle cx="150" cy="100" r="50" fill="%23666"/><circle cx="150" cy="100" r="40" fill="%23444"/><circle cx="150" cy="100" r="15" fill="%23222"/><circle cx="150" cy="100" r="10" fill="%23000"/><circle cx="170" cy="80" r="5" fill="%23fff" opacity="0.7"/></svg>');
+}
+
+#product-2 {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200"><rect width="300" height="200" fill="%23212529"/><rect x="75" y="60" width="150" height="80" rx="8" fill="%23555"/><circle cx="150" cy="100" r="25" fill="%23333"/><circle cx="150" cy="100" r="18" fill="%23222"/><circle cx="150" cy="100" r="10" fill="%23000"/><rect x="230" y="80" width="10" height="40" fill="%23666"/><rect x="240" y="85" width="10" height="30" fill="%23666"/></svg>');
+}
+
+#product-3 {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200"><rect width="300" height="200" fill="%23212529"/><rect x="80" y="50" width="140" height="100" rx="10" fill="%23444"/><circle cx="150" cy="100" r="30" fill="%23333"/><circle cx="150" cy="100" r="20" fill="%23222"/><circle cx="150" cy="100" r="10" fill="%23000"/><circle cx="165" cy="85" r="5" fill="%23fff" opacity="0.5"/><rect x="160" y="40" width="20" height="10" rx="3" fill="%23555"/></svg>');
+}
+
+#product-4 {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200"><rect width="300" height="200" fill="%23212529"/><rect x="100" y="60" width="100" height="80" rx="5" fill="%23333"/><circle cx="150" cy="100" r="25" fill="%23222"/><circle cx="150" cy="100" r="15" fill="%23000"/><path d="M220,80 v40 h-30 v-40 z" fill="%23555"/><rect x="100" y="150" width="100" height="10" rx="3" fill="%23666"/></svg>');
+}
+
+#product-5 {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200"><rect width="300" height="200" fill="%23212529"/><circle cx="150" cy="100" r="30" fill="%23444" stroke="%23666" stroke-width="5"/><circle cx="150" cy="100" r="15" fill="%23222"/><circle cx="150" cy="100" r="8" fill="%23000"/><rect x="135" y="60" width="30" height="15" rx="2" fill="%23555"/><rect x="145" y="140" width="10" height="20" fill="%23666"/><rect x="135" y="160" width="30" height="10" rx="2" fill="%23555"/></svg>');
+}
+
+#product-6 {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200"><rect width="300" height="200" fill="%23212529"/><circle cx="100" cy="100" r="40" fill="%23444"/><circle cx="200" cy="100" r="40" fill="%23444"/><circle cx="100" cy="100" r="25" fill="%23333"/><circle cx="200" cy="100" r="25" fill="%23333"/><circle cx="100" cy="100" r="15" fill="%23222"/><circle cx="200" cy="100" r="15" fill="%23222"/><rect x="100" y="60" width="100" height="15" rx="5" fill="%23666"/></svg>');
+}
